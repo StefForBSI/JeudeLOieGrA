@@ -1,7 +1,9 @@
-#include <iostream>
-#inclue "condFive.h"
+#include "condFive.h"
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int condFive(int solde, int dice) {
+	
+	if (solde % 5 == 0) { 
+		solde -= dice;
+	}
+	return solde;
 }
