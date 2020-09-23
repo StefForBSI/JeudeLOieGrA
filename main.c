@@ -1,21 +1,30 @@
-int main() 
+#include <stdio.h>
+#include <getplayervalue.h>
+#include <dicevalue.h>
+#include <condeleven.h>
+#include <condpair.h>
+#include <condfive.h>
+#include <condequal.h>
+#include <checkwinnerslosers.h>
+
+int main()
 {
-    int player1Solde;
-    int player2Solde;
-    int player1Value;
-    int player2Value;
+    int player1Solde = 0;
+    int player2Solde = 0;
+    int player1Goal;
+    int player2Goal;
 
     int dice;
-    int turn;
+    int turn = 0;
 
-    player1Value = getPlayerValue();
-    player2Value = getPlayerValue();
+    player1Goal = getPlayerValue();
+    player2Goal = getPlayerValue();
 
-    while(player1 >= player1Value && player2 >= player2Value)
+    while (player1Solde >= player1Goal && player2Solde >= player2Goal)
     {
         dice = diceValue();
 
-        if (turn == 0) 
+        if (turn == 0)
         {
             player1Solde += dice;
 
@@ -24,7 +33,7 @@ int main()
             player1Solde = condFive(player1Solde, dice);
             player1Solde = condEqual(player1Solde, dice);
         }
-        else 
+        else
         {
             player2Solde += dice;
 
@@ -37,5 +46,5 @@ int main()
         turn = turn == 0 ? 1 : 0;
     }
 
-    checkWinnersLosers(player1Solde, player2Solde)
+    checkWinnersLosers(player1Solde, player2Solde, player1Goal, player2Goal);
 }
