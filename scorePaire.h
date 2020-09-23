@@ -1,0 +1,1 @@
+int scorePaire(int Score, int ValD);
