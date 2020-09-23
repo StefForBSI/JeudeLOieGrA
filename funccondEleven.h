@@ -1,0 +1,1 @@
+int condEleven (int solde);
