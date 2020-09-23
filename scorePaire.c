@@ -4,11 +4,12 @@
 //output:
 //  NouveauScore : Valeur du nouveau score qu'il faudra appliquer au joueur
 int scorePaire(int Score, int ValD){
+    //generation d'un score temporaire:
     int NouveauScore;
-    if(score%2 == 0){
-        NouveauScore = Score+valD
+    if(score%2 == 0){ //Si le score est pair
+        NouveauScore = Score+valD; //Score + valeur du de
     }else{
-        NouveauScore = Score;
+        NouveauScore = Score; //pas de changement du score
     }
-    return NouveauScore 
+    return NouveauScore //renvoi du nouveau score
 }
