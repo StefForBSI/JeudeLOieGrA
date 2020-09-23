@@ -31,7 +31,7 @@ int main()
             player1Solde = condEleven(player1Solde);
             player1Solde = condPair(player1Solde, dice);
             player1Solde = condFive(player1Solde, dice);
-            player1Solde = condEqual(player1Solde, dice);
+            player1Solde = condEqual(player1Solde, player2Solde dice);
         }
         else
         {
@@ -40,7 +40,7 @@ int main()
             player2Solde = condEleven(player2Solde);
             player2Solde = condPair(player2Solde, dice);
             player2Solde = condFive(player2Solde, dice);
-            player2Solde = condEqual(player2Solde, dice);
+            player2Solde = condEqual(player1Solde, player2Solde, dice);
         }
 
         turn = turn == 0 ? 1 : 0;
